@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnchSerchBook" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="683.0" style="-fx-background-color: #d3cbcb;;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.BooksearchResultsController">
+   <children>
+      <Label fx:id="BooknameLabel" layoutX="9.0" layoutY="14.0" prefHeight="36.0" prefWidth="611.0" text="Book name :">
+         <font>
+            <Font name="Calibri Bold" size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="TableofContentsbnt" layoutX="169.0" layoutY="93.0" mnemonicParsing="false" onAction="#TableofContentsbntHandler" prefHeight="31.0" prefWidth="256.0" style="-fx-background-color: visble;" text="To view Table of Contents click her" underline="true">
+         <effect>
+            <Glow level="0.35" />
+         </effect>
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="Closebnt" layoutX="276.0" layoutY="142.0" mnemonicParsing="false" onAction="#ClosebntHandler" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #2575ff;" text="Close" textFill="WHITE">
+         <font>
+            <Font name="Roboto" size="13.0" />
+         </font>
+         <effect>
+            <Glow level="0.35" />
+         </effect>
+      </Button>
+      <Label fx:id="AuthorLabel" layoutX="10.0" layoutY="52.0" prefHeight="24.0" prefWidth="174.0" text="Author:">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="GenreLabel" layoutX="199.0" layoutY="52.0" prefHeight="24.0" prefWidth="221.0" text="Genre:">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="DescriptionLabel" layoutX="426.0" layoutY="52.0" prefHeight="24.0" prefWidth="75.0" text="Description:">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="BookLoactionLabel" layoutX="14.0" layoutY="97.0" prefHeight="24.0" prefWidth="119.0" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="DescriptionTextAreaField" layoutX="501.0" layoutY="48.0" prefHeight="123.0" prefWidth="174.0" style="-fx-background-color: #f8f8f8;">
+         <effect>
+            <InnerShadow color="#e4e0e0" />
+         </effect>
+      </TextArea>
+      <Label fx:id="minDateReturnLabel" layoutX="11.0" layoutY="130.0" prefHeight="24.0" prefWidth="244.0" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

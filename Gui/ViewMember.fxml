@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnchorHome" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="611.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.ViewMemberController">
+   <children>
+      <ImageView fx:id="Image" fitHeight="611.0" fitWidth="642.0" layoutX="145.0" opacity="0.25" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@137053312.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="TableviewLoan" layoutX="158.0" layoutY="420.0" prefHeight="173.0" prefWidth="485.0" style="-fx-background-color: visble;" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="158.0" AnchorPane.rightAnchor="158.0" AnchorPane.topAnchor="420.0">
+         <columns>
+            <TableColumn fx:id="Titel" prefWidth="140.0" text="Titel" />
+            <TableColumn fx:id="Tagged" prefWidth="72.0" text="Tagged" />
+            <TableColumn fx:id="IssueDate" prefWidth="123.0" text="Issue Date" />
+            <TableColumn fx:id="ReturnDate" prefWidth="149.0" text="Return Date" />
+         </columns>
+      </TableView>
+      <Label fx:id="ViewMemberL" layoutX="176.0" layoutY="38.0" prefHeight="40.0" prefWidth="314.0" text="View Tal Tolochinsky :       " textFill="#140606">
+         <font>
+            <Font name="Calibri Bold" size="29.0" />
+         </font>
+      </Label>
+      <Button fx:id="extendloanbnt" layoutX="658.0" layoutY="475.0" mnemonicParsing="false" onAction="#extendloanbntHandler" prefHeight="36.0" prefWidth="106.0" style="-fx-background-color: #2575ff;" text="extend loan" textFill="WHITE">
+         <font>
+            <Font name="Roboto" size="13.0" />
+         </font>
+         <effect>
+            <Glow level="0.35" />
+         </effect>
+      </Button>
+      <TextField fx:id="MemberIDTextField" layoutX="262.0" layoutY="102.0" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: #f8f8f8;">
+         <font>
+            <Font name="Arial Italic" size="14.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#cdbdbd" />
+         </effect>
+      </TextField>
+      <Label fx:id="IDLabel" layoutX="175.0" layoutY="105.0" prefHeight="21.0" prefWidth="100.0" text="Member ID :" />
+      <Label fx:id="EmailLabel" layoutX="447.0" layoutY="101.0" prefHeight="21.0" prefWidth="52.0" text="Email :" />
+      <TextField fx:id="EmailTextField" layoutX="499.0" layoutY="98.0" prefHeight="26.0" prefWidth="180.0" style="-fx-background-color: #f8f8f8;">
+         <font>
+            <Font name="Arial Italic" size="14.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#cdbdbd" />
+         </effect>
+      </TextField>
+      <Label fx:id="StatusLabel" layoutX="439.0" layoutY="135.0" prefHeight="21.0" prefWidth="52.0" text="Status :" />
+      <TextField fx:id="PhonnumberTextField" layoutX="262.0" layoutY="136.0" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: #f8f8f8;">
+         <font>
+            <Font name="Arial Italic" size="14.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#cdbdbd" />
+         </effect>
+      </TextField>
+      <Label fx:id="PhonnumberLabel" layoutX="160.0" layoutY="139.0" prefHeight="21.0" prefWidth="100.0" text="Phon number :" />
+      <TableView fx:id="TableviewReturn" layoutX="160.0" layoutY="231.0" prefHeight="158.0" prefWidth="510.0" style="-fx-background-color: visble;">
+         <columns>
+            <TableColumn fx:id="TitelReturn" prefWidth="140.0" text="Titel" />
+            <TableColumn fx:id="IssueDateReturn" prefWidth="120.0" text="Issue Date" />
+            <TableColumn fx:id="ReturnDateReturn" prefWidth="119.0" text="Return Date" />
+            <TableColumn fx:id="actualReturnDate" prefWidth="130.0" text="actualReturnDate" />
+         </columns>
+      </TableView>
+      <Label fx:id="RecentlyreturnedLabel" layoutX="160.0" layoutY="196.0" prefHeight="21.0" prefWidth="153.0" text="Recently returned  :" underline="true">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font></Label>
+      <Label fx:id="CurrentlyloansLabel" layoutX="160.0" layoutY="384.0" prefHeight="36.0" prefWidth="125.0" text="Currently loans :" underline="true">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font></Label>
+      <Button fx:id="SAVEEDITbnt" layoutX="701.0" layoutY="108.0" mnemonicParsing="false" onAction="#SAVEEDITbntHandler" prefHeight="36.0" prefWidth="86.0" style="-fx-background-color: #2575ff;" text="SAVE EDIT" textFill="WHITE">
+         <font>
+            <Font name="Roboto" size="13.0" />
+         </font>
+         <effect>
+            <Glow level="0.35" />
+         </effect>
+      </Button>
+      <ComboBox fx:id="StatusComboBox" layoutX="499.0" layoutY="134.0" maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefHeight="26.0" prefWidth="180.0" />
+      <VBox fx:id="Vbox" layoutY="3.0" prefHeight="606.0" prefWidth="153.0" style="-fx-background-color: #d3cbcb;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="TimeL" alignment="CENTER" prefHeight="25.0" prefWidth="165.0" text="15:31:03">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="DateL" alignment="CENTER" prefHeight="25.0" prefWidth="162.0">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="NameLabel" prefHeight="45.0" prefWidth="170.0">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="Profilebnt" mnemonicParsing="false" onAction="#ProfileHandler" prefHeight="56.0" prefWidth="159.0" style="-fx-background-color: #2575ff;" text="Profile" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+            <Button fx:id="Addnewmemberbnt" ellipsisString="" mnemonicParsing="false" onAction="#AddnewmemberbntHandler" prefHeight="56.0" prefWidth="159.0" style="-fx-background-color: #2575ff;" text="Add new member" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+            <Button fx:id="SearchBookbnt" mnemonicParsing="false" onAction="#SearchBookbntHandler" prefHeight="56.0" prefWidth="159.0" style="-fx-background-color: #2575ff;">
+               <font>
+                  <Font name="Sitka Small" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+               <graphic>
+                  <ImageView fx:id="SearchImage" fitHeight="40.0" fitWidth="64.0">
+                     <image>
+                        <Image url="@מילון_עם_זכוכית_מגדלת.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="Searchmemberbnt" mnemonicParsing="false" onAction="#SearchmemberbntHandler" prefHeight="56.0" prefWidth="159.0" style="-fx-background-color: #2575ff;" text="Search member" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+            <Button fx:id="ReturnBookbnt" mnemonicParsing="false" onAction="#ReturnBookbntHandler" prefHeight="56.0" prefWidth="159.0" style="-fx-background-color: #2575ff;" text="Return Book" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+            <Button fx:id="Inventorybnt" minWidth="-Infinity" mnemonicParsing="false" onAction="#InventorybntHandler" prefHeight="56.0" prefWidth="159.0" style="-fx-background-color: #2575ff;" text="Inventory" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+            <Button fx:id="Messagesbnt" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#MessagesbntHandler" prefHeight="56.0" prefWidth="159.0" style="-fx-background-color: #2575ff;" text=" Message" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+               <graphic>
+                  <ImageView fx:id="ImgeMessages" fitHeight="32.0" fitWidth="55.0">
+                     <image>
+                        <Image url="@MSG2.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="Logoutbnt" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#LogoutHandler" prefHeight="56.0" prefWidth="159.0" style="-fx-background-color: #2575ff;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

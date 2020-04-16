@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnchSerchBook" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="371.0" prefWidth="407.0" style="-fx-background-color: #d3cbcb;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.AddNewMemberController">
+   <children>
+      <Label fx:id="AddNewMemberLabel" layoutX="23.0" layoutY="14.0" prefHeight="36.0" prefWidth="224.0" text="Add New Member:">
+         <font>
+            <Font name="Calibri Bold" size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="saveBnt" layoutX="158.0" layoutY="305.0" mnemonicParsing="false" onAction="#saveBntHandler" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #2575ff;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Roboto" size="13.0" />
+         </font>
+         <effect>
+            <Glow level="0.35" />
+         </effect>
+      </Button>
+      <GridPane fx:id="Gridpane" layoutX="31.0" layoutY="51.0" prefHeight="228.0" prefWidth="348.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="115.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="309.0" minWidth="10.0" prefWidth="233.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="FirstnameLabel" prefHeight="38.0" prefWidth="122.0" text="First name:">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="LastnameLabel" prefHeight="38.0" prefWidth="122.0" text="Last name:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="IDLabel" prefHeight="38.0" prefWidth="122.0" text="ID:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="EmailLabel" prefHeight="38.0" prefWidth="122.0" text="Email:" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="PhonenumberLabel" prefHeight="38.0" prefWidth="122.0" text="Phone number:" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="GraduationyearLabel" prefHeight="38.0" prefWidth="122.0" text="Graduation year:" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="FirstnameField" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="179.0" style="-fx-background-color: #f8f8f8;" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Calibri Italic" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#e8e8e8" />
+               </effect>
+            </TextField>
+            <TextField fx:id="LastnameFiled" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="179.0" style="-fx-background-color: #f8f8f8;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Calibri Italic" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#e8e8e8" />
+               </effect>
+            </TextField>
+            <TextField fx:id="IDField" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="179.0" style="-fx-background-color: #f8f8f8;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Calibri Italic" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#e8e8e8" />
+               </effect>
+            </TextField>
+            <TextField fx:id="EmailField" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="179.0" style="-fx-background-color: #f8f8f8;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Calibri Italic" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#e8e8e8" />
+               </effect>
+            </TextField>
+            <TextField fx:id="PhonenumberField" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="179.0" style="-fx-background-color: #f8f8f8;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Calibri Italic" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#e8e8e8" />
+               </effect>
+            </TextField>
+            <TextField fx:id="GraduationyearField" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="179.0" style="-fx-background-color: #f8f8f8;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Calibri Italic" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#e8e8e8" />
+               </effect>
+            </TextField>
+         </children>
+      </GridPane>
+      <Button fx:id="Cancelbnt" layoutX="257.0" layoutY="305.0" mnemonicParsing="false" onAction="#CancelbntHandler" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: visbl;" text="Cancel" underline="true">
+         <font>
+            <Font name="Roboto" size="13.0" />
+         </font>
+         <effect>
+            <Glow level="0.35" />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnchorHome" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.ActivityLogmemberController">
+   <children>
+      <ImageView fx:id="Image" fitHeight="470.0" fitWidth="642.0" layoutX="145.0" opacity="0.25">
+         <image>
+            <Image url="@137053312.jpg" />
+         </image>
+      </ImageView>
+      <TabPane fx:id="tableView" layoutX="156.0" prefHeight="470.0" prefWidth="630.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="156.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="Tab1" text="Untitled Tab 1" />
+          <Tab fx:id="Tab2" text="Untitled Tab 2">
+               <content>
+                  <TableView fx:id="TableView" prefHeight="325.0" prefWidth="564.0">
+                    <columns>
+                      <TableColumn fx:id="Title" prefWidth="75.0" text="Title" />
+                      <TableColumn fx:id="issueDate" prefWidth="75.0" text="issueDate" />
+                        <TableColumn fx:id="actualReturnDate" prefWidth="75.0" text="actualReturnDate" />
+                        <TableColumn fx:id="statusReturn" prefWidth="50.0" text="statusReturn" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <VBox fx:id="Vbox" layoutY="-5.0" prefHeight="470.0" prefWidth="153.0" style="-fx-background-color: #d3cbcb;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="633.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="TimeL" alignment="CENTER" prefHeight="25.0" prefWidth="165.0" text="15:31:03">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="DateL" alignment="CENTER" prefHeight="25.0" prefWidth="162.0">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="NameLabel" prefHeight="45.0" prefWidth="170.0">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="Profilebnt" mnemonicParsing="false" onAction="#ProfileHandler" prefHeight="59.0" prefWidth="159.0" style="-fx-background-color: #2575ff;" text="Profile" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+            <Button fx:id="MyBooksbn" ellipsisString="" mnemonicParsing="false" onAction="#MyBooksbnHandler" prefHeight="59.0" prefWidth="159.0" style="-fx-background-color: #2575ff;" text="My Books" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+            <Button fx:id="SearchBookbnt" mnemonicParsing="false" onAction="#SearchBookbntHandler" prefHeight="59.0" prefWidth="159.0" style="-fx-background-color: #2575ff;">
+               <font>
+                  <Font name="Sitka Small" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+               <graphic>
+                  <ImageView fx:id="SearchImage" fitHeight="40.0" fitWidth="64.0">
+                     <image>
+                        <Image url="@מילון_עם_זכוכית_מגדלת.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="ActivityLogbnt" mnemonicParsing="false" onAction="#ActivityLogbntHandler" prefHeight="59.0" prefWidth="154.0" style="-fx-background-color: #2575ff;" text="Activity Log" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+            <Button fx:id="Logoutbnt" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#LogoutHandler" prefHeight="59.0" prefWidth="154.0" style="-fx-background-color: #2575ff;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

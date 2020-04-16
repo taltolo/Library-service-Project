@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnchorHome" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.MyBookController">
+   <children>
+      <ImageView fx:id="Image" fitHeight="471.0" fitWidth="635.0" layoutX="152.0" opacity="0.25">
+         <image>
+            <Image url="@137053312.jpg" />
+         </image>
+      </ImageView>
+      <VBox fx:id="Vbox" prefHeight="470.0" prefWidth="160.0" style="-fx-background-color: #d3cbcb;">
+         <children>
+            <Label fx:id="TimeL" alignment="CENTER" prefHeight="25.0" prefWidth="167.0" text="15:31:03">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="DateL" alignment="CENTER" prefHeight="25.0" prefWidth="168.0" text="13/12/2018">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="NameLabel" prefHeight="45.0" prefWidth="170.0">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="Profilebnt" mnemonicParsing="false" onAction="#ProfileHandler" prefHeight="59.0" prefWidth="159.0" style="-fx-background-color: #2575ff;" text="Profile" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+            <Button fx:id="MyBooksbn" ellipsisString="" mnemonicParsing="false" onAction="#MyBooksbnHandler" prefHeight="59.0" prefWidth="159.0" style="-fx-background-color: #2575ff;" text="My Books" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+            <Button fx:id="SearchBookbnt" mnemonicParsing="false" onAction="#SearchBookbntHandler" prefHeight="59.0" prefWidth="159.0" style="-fx-background-color: #2575ff;">
+               <font>
+                  <Font name="Sitka Small" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+               <graphic>
+                  <ImageView fx:id="SearchImage" fitHeight="40.0" fitWidth="64.0">
+                     <image>
+                        <Image url="@מילון_עם_זכוכית_מגדלת.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="ActivityLogbnt" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ActivityLogbntHandler" prefHeight="59.0" prefWidth="159.0" style="-fx-background-color: #2575ff;" text="Activity Log" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+            <Button fx:id="Logoutbnt" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#LogoutHandler" prefHeight="59.0" prefWidth="159.0" style="-fx-background-color: #2575ff;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+         </children>
+      </VBox>
+      <Label fx:id="MyBooksLabel" layoutX="173.0" layoutY="71.0" prefHeight="40.0" prefWidth="200.0" text="My Books :">
+         <font>
+            <Font name="Calibri Bold" size="29.0" />
+         </font>
+      </Label>
+      <TableView fx:id="TableviewLoan" layoutX="156.0" layoutY="214.0" prefHeight="230.0" prefWidth="624.0" AnchorPane.rightAnchor="2.0">
+         <columns>
+            <TableColumn fx:id="Titel" prefWidth="180.0" text="Titel" />
+            <TableColumn fx:id="Tagged" prefWidth="100.0" text="Tagged" />
+            <TableColumn fx:id="IssueDate" prefWidth="171.0" text="Issue Date" />
+            <TableColumn fx:id="ReturnDate" prefWidth="176.0" text="Return Date" />
+         </columns>
+      </TableView>
+      <Button fx:id="extendloanbnt" layoutX="320.0" layoutY="144.0" mnemonicParsing="false" onAction="#extendloanbntHandler" prefHeight="36.0" prefWidth="106.0" style="-fx-background-color: #2575ff;" text="extend loan" textFill="WHITE">
+         <font>
+            <Font name="Roboto" size="13.0" />
+         </font>
+         <effect>
+            <Glow level="0.35" />
+         </effect>
+      </Button>
+      <Button fx:id="viewBookbnt" layoutX="470.0" layoutY="144.0" mnemonicParsing="false" onAction="#viewBookbntHandler" prefHeight="36.0" prefWidth="112.0" style="-fx-background-color: #2575ff;" text="View Book" textFill="WHITE">
+         <font>
+            <Font name="Roboto" size="13.0" />
+         </font>
+         <effect>
+            <Glow level="0.35" />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

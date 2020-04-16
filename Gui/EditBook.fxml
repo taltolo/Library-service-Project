@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnchSerchBook" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="674.0" style="-fx-background-color: #d3cbcb;;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.EditBookController">
+   <children>
+      <GridPane layoutX="23.0" layoutY="66.0" prefHeight="292.0" prefWidth="626.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="123.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="155.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="123.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="155.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="BookIDLabel" prefHeight="18.0" prefWidth="99.0" text="Book ID :">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="BookNameLabel" prefHeight="18.0" prefWidth="82.0" text="Book Name:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="AuthorLabel" prefHeight="18.0" prefWidth="93.0" text="Author:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="GenreLabel" prefHeight="18.0" prefWidth="93.0" text="Genre:" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="DescriptionLabel" prefHeight="18.0" prefWidth="93.0" text="Description:" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="EditionNumberLabel" alignment="CENTER" prefHeight="18.0" prefWidth="125.0" text="Edition Number:" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="BookLoactionLabel" alignment="CENTER" prefHeight="18.0" prefWidth="117.0" text="Book Loaction:" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="QuantityLabel" alignment="CENTER" prefHeight="18.0" prefWidth="84.0" text="Quantity:" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="CurrentlyonLoanLabel" alignment="CENTER" prefHeight="18.0" prefWidth="136.0" text="Currently on Loan:" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="ExecutionDateLabel" alignment="CENTER" prefHeight="18.0" prefWidth="122.0" text="Execution Date:" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="PurchaseDateLabel" alignment="CENTER" prefHeight="18.0" prefWidth="119.0" text="Purchase Date:" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="TableofContentsLabel" prefHeight="18.0" prefWidth="124.0" text="Table of Contents:" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="PurchaseDateTEXT" disable="true" prefHeight="31.0" prefWidth="206.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <DatePicker fx:id="ExecutionDateTEXT" disable="true" prefHeight="31.0" prefWidth="206.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <TextField fx:id="TableofContentsTextField" disable="true" prefHeight="31.0" prefWidth="197.0" style="-fx-background-color: #f8f8f8;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Arial Italic" size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#cdbdbd" />
+               </effect>
+            </TextField>
+            <TextField fx:id="BookIDTextField" disable="true" prefHeight="31.0" prefWidth="197.0" style="-fx-background-color: #f8f8f8;" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Arial Italic" size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#cdbdbd" />
+               </effect>
+            </TextField>
+            <TextField fx:id="BookNameTextField" prefHeight="31.0" prefWidth="197.0" style="-fx-background-color: #f8f8f8;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Italic" size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#cdbdbd" />
+               </effect>
+            </TextField>
+            <TextField fx:id="GenreTextField" prefHeight="31.0" prefWidth="197.0" style="-fx-background-color: #f8f8f8;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial Italic" size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#cdbdbd" />
+               </effect>
+            </TextField>
+            <TextField fx:id="AuthorTextField" prefHeight="31.0" prefWidth="197.0" style="-fx-background-color: #f8f8f8;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Italic" size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#cdbdbd" />
+               </effect>
+            </TextField>
+            <TextField fx:id="DescriptionTextField" prefHeight="31.0" prefWidth="197.0" style="-fx-background-color: #f8f8f8;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial Italic" size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#cdbdbd" />
+               </effect>
+            </TextField>
+            <TextField fx:id="EditionNumberTextField" prefHeight="31.0" prefWidth="197.0" style="-fx-background-color: #f8f8f8;" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Arial Italic" size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#cdbdbd" />
+               </effect>
+            </TextField>
+            <TextField fx:id="BookLoactionTextField" prefHeight="31.0" prefWidth="197.0" style="-fx-background-color: #f8f8f8;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Italic" size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#cdbdbd" />
+               </effect>
+            </TextField>
+            <TextField fx:id="QuantityTextField" prefHeight="31.0" prefWidth="197.0" style="-fx-background-color: #f8f8f8;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Italic" size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#cdbdbd" />
+               </effect>
+            </TextField>
+            <TextField fx:id="CurrentlyonLoanTextField" disable="true" prefHeight="31.0" prefWidth="197.0" style="-fx-background-color: #f8f8f8;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial Italic" size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#cdbdbd" />
+               </effect>
+            </TextField>
+            <Label fx:id="TaggedLabel" prefHeight="18.0" prefWidth="93.0" text="Tagged:" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="TaggedComboBox" prefHeight="31.0" prefWidth="197.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <Label fx:id="LendingaBookLabel" layoutX="23.0" layoutY="14.0" prefHeight="36.0" prefWidth="224.0" text="Edit a Book :">
+         <font>
+            <Font name="Calibri Bold" size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="SaveBTN" layoutX="281.0" layoutY="375.0" mnemonicParsing="false" onAction="#SaveBntHandler" prefHeight="36.0" prefWidth="99.0" style="-fx-background-color: #2575ff;" text="Save Changes" textFill="WHITE">
+         <font>
+            <Font name="Roboto" size="13.0" />
+         </font>
+         <effect>
+            <Glow level="0.35" />
+         </effect>
+      </Button>
+      <Button fx:id="Cancelbnt" layoutX="419.0" layoutY="375.0" mnemonicParsing="false" onAction="#CancelbntHandler" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #2575ff;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="Roboto" size="13.0" />
+         </font>
+         <effect>
+            <Glow level="0.35" />
+         </effect>
+      </Button>
+      <Button fx:id="pdfBTN" alignment="CENTER" layoutX="167.0" layoutY="358.0" mnemonicParsing="false" onAction="#UploadFileHandler" pickOnBounds="false" prefHeight="25.0" prefWidth="101.0" text="Upload PDF" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

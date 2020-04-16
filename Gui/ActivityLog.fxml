@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnchorHome" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.ActivityLogController">
+   <children>
+      <ImageView fx:id="Image" fitHeight="470.0" fitWidth="642.0" layoutX="145.0" opacity="0.25">
+         <image>
+            <Image url="@137053312.jpg" />
+         </image>
+      </ImageView>
+      <VBox fx:id="Vbox" layoutY="-5.0" prefHeight="470.0" prefWidth="153.0" style="-fx-background-color: #d3cbcb;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="633.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="TimeL" alignment="CENTER" prefHeight="25.0" prefWidth="165.0" text="15:31:03">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="DateL" alignment="CENTER" prefHeight="25.0" prefWidth="162.0">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="NameLabel" prefHeight="45.0" prefWidth="170.0">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="Profilebnt" mnemonicParsing="false" onAction="#ProfileHandler" prefHeight="59.0" prefWidth="159.0" style="-fx-background-color: #2575ff;" text="Profile" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+            <Button fx:id="MyBooksbn" ellipsisString="" mnemonicParsing="false" onAction="#MyBooksbnHandler" prefHeight="59.0" prefWidth="159.0" style="-fx-background-color: #2575ff;" text="My Books" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+            <Button fx:id="SearchBookbnt" mnemonicParsing="false" onAction="#SearchBookbntHandler" prefHeight="59.0" prefWidth="159.0" style="-fx-background-color: #2575ff;">
+               <font>
+                  <Font name="Sitka Small" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+               <graphic>
+                  <ImageView fx:id="SearchImage" fitHeight="40.0" fitWidth="64.0">
+                     <image>
+                        <Image url="@מילון_עם_זכוכית_מגדלת.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="ActivityLogbnt" mnemonicParsing="false" onAction="#ActivityLogbntHandler" prefHeight="59.0" prefWidth="154.0" style="-fx-background-color: #2575ff;" text="Activity Log" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+            <Button fx:id="Logoutbnt" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#LogoutHandler" prefHeight="59.0" prefWidth="154.0" style="-fx-background-color: #2575ff;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+         </children>
+      </VBox>
+      <TabPane fx:id="TabPane" layoutX="159.0" prefHeight="470.0" prefWidth="626.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="159.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="Historyofloaning" text="History of loaning">
+               <content>
+                  <TableView fx:id="TableHistory" fixedCellSize="1.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: visble;">
+                    <columns>
+                      <TableColumn fx:id="TitleHistory" prefWidth="170.0" text="Title" />
+                      <TableColumn fx:id="IssueDateHistory" prefWidth="169.0" text="Issue Date" />
+                        <TableColumn fx:id="ReturnDateHistory" prefWidth="169.0" text="Return Date" />
+                        <TableColumn fx:id="ReturnStausHistory" prefWidth="140.0" text="Return Staus" />
+                    </columns>
+                  </TableView>
+               </content>
+            </Tab>
+          <Tab fx:id="MyOrders" text="My Orders">
+               <content>
+                  <GridPane fx:id="GridPaneMyOrders" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="282.0" prefWidth="631.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="283.0" minWidth="-Infinity" prefWidth="207.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="148.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="147.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="88.0" minHeight="3.0" prefHeight="13.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="107.0" minHeight="3.0" prefHeight="13.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="107.0" minHeight="3.0" prefHeight="13.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="107.0" minHeight="3.0" prefHeight="13.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="107.0" minHeight="3.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="107.0" minHeight="3.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="107.0" minHeight="3.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="TitleOrder" prefHeight="23.0" prefWidth="281.0" text="Title" underline="true">
+                           <font>
+                              <Font name="Calibri Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="StausOrder" alignment="CENTER" contentDisplay="CENTER" prefHeight="23.0" prefWidth="210.0" text="Staus Order" textFill="#140606" underline="true" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Calibri" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Option" alignment="CENTER" contentDisplay="CENTER" prefHeight="23.0" prefWidth="210.0" text="Option" textFill="#140606" underline="true" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="Calibri" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

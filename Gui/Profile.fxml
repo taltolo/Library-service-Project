@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.ImageInput?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnchorHome" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.ProfileController">
+   <children>
+      <ImageView fx:id="Image" fitHeight="471.0" fitWidth="635.0" layoutX="152.0" opacity="0.17">
+         <image>
+            <Image url="@137053312.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="WelcomeLabel" layoutX="176.0" layoutY="38.0" prefHeight="40.0" prefWidth="354.0" text="Welcome,   :" textFill="#140606">
+         <font>
+            <Font name="Calibri Bold" size="29.0" />
+         </font>
+      </Label>
+      <VBox fx:id="Vbox" layoutY="-5.0" prefHeight="470.0" prefWidth="160.0" style="-fx-background-color: #d3cbcb;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="626.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="TimeL" alignment="CENTER" prefHeight="25.0" prefWidth="165.0" text="15:31:03">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="DateL" alignment="CENTER" prefHeight="25.0" prefWidth="162.0">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="NameLabel" prefHeight="45.0" prefWidth="170.0">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="Profilebnt" mnemonicParsing="false" onAction="#ProfileHandler" prefHeight="59.0" prefWidth="159.0" style="-fx-background-color: #2575ff;" text="Profile" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+            <Button fx:id="MyBooksbn" ellipsisString="" mnemonicParsing="false" onAction="#MyBooksbnHandler" prefHeight="59.0" prefWidth="159.0" style="-fx-background-color: #2575ff;" text="My Books" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+            <Button fx:id="SearchBookbnt" mnemonicParsing="false" onAction="#SearchBookbntHandler" prefHeight="59.0" prefWidth="159.0" style="-fx-background-color: #2575ff;">
+               <font>
+                  <Font name="Sitka Small" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+               <graphic>
+                  <ImageView fx:id="SearchImage" fitHeight="40.0" fitWidth="64.0">
+                     <image>
+                        <Image url="@מילון_עם_זכוכית_מגדלת.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="ActivityLogbnt" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ActivityLogbntHandler" prefHeight="59.0" prefWidth="159.0" style="-fx-background-color: #2575ff;" text="Activity Log" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+            <Button fx:id="Logoutbnt" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#LogoutHandler" prefHeight="59.0" prefWidth="159.0" style="-fx-background-color: #2575ff;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.35" />
+               </effect>
+            </Button>
+         </children>
+      </VBox>
+      <Label fx:id="FullNameLabel" layoutX="208.0" layoutY="124.0" text="Full Name : ">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="IDLabel" layoutX="208.0" layoutY="176.0" text="Student ID :">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="CardNumberLabel" layoutX="184.0" layoutY="227.0" prefHeight="24.0" prefWidth="118.0" text="Card Number :">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="FullNameField" disable="true" layoutX="309.0" layoutY="121.0" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #f8f8f8;" text="Bark Arel">
+         <font>
+            <Font name="Calibri Bold Italic" size="16.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#cdbdbd" />
+         </effect>
+      </TextField>
+      <Label fx:id="StatusLabel" layoutX="236.0" layoutY="279.0" prefHeight="24.0" prefWidth="66.0" text="Status :">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="IDfiels" disable="true" layoutX="309.0" layoutY="175.0" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #f8f8f8;" text="204677645">
+         <font>
+            <Font name="Calibri Bold Italic" size="16.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#cdbdbd" />
+         </effect>
+      </TextField>
+      <TextField fx:id="CardNumberField" disable="true" layoutX="309.0" layoutY="227.0" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #f8f8f8;" text="123113">
+         <font>
+            <Font name="Calibri Bold Italic" size="16.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#cdbdbd" />
+         </effect>
+      </TextField>
+      <TextField fx:id="StatusFeild" disable="true" editable="false" layoutX="309.0" layoutY="279.0" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #f8f8f8;" text="ACTIVE">
+         <font>
+            <Font name="Calibri Bold Italic" size="16.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#cdbdbd" />
+         </effect>
+      </TextField>
+      <Label fx:id="PhoneNumberLabel" layoutX="455.0" layoutY="126.0" prefHeight="18.0" prefWidth="109.0" text="Phone Number :">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="EmailLabel" layoutX="518.0" layoutY="176.0" text="Email :">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="ClearBnt" contentDisplay="CENTER" layoutX="680.0" layoutY="259.0" mnemonicParsing="false" onAction="#ClearBntHandler" prefHeight="40.0" prefWidth="79.0" text="Clear">
+         <font>
+            <Font name="Calibri" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="PhoneNumberFeild" layoutX="575.0" layoutY="124.0" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: #f8f8f8;" text="0509826651">
+         <font>
+            <Font name="Calibri Bold Italic" size="16.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#cdbdbd" />
+         </effect>
+      </TextField>
+      <TextField fx:id="EmailFeild" layoutX="575.0" layoutY="171.0" prefHeight="25.0" prefWidth="184.0" style="-fx-background-color: #f8f8f8;" text="BarkArel93@gmail.com">
+         <font>
+            <Font name="Calibri Bold Italic" size="16.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#cdbdbd" />
+         </effect>
+      </TextField>
+      <Button fx:id="BntUpdata" contentDisplay="CENTER" layoutX="575.0" layoutY="256.0" mnemonicParsing="false" onAction="#BntUpdataHandler" prefHeight="45.0" prefWidth="79.0">
+         <font>
+            <Font name="Calibri" size="15.0" />
+         </font>
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image url="file:/D:/temp/eclipse/photon/Oblnew/src/Gui/Pro.PNG" />
+               </source>
+            </ImageInput>
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
